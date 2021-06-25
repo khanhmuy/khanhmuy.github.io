@@ -32,3 +32,43 @@ body {
 a {
 	color: white
 }
+
+.boxes {
+	position: relative;
+	background: rgba(0, 0, 0, .2);
+	box-shadow: 0px 3px 5px black;
+	width: 300px;
+	height: 180px;
+	display: inline-block;
+	border-radius: 5px;
+	margin: 10 10;
+	padding: 0 20;
+	vertical-align: middle;
+	transition: background-color 0.2s, filter 0.2s;
+  }
+  
+  .boxes::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	filter: blur(10px);
+	z-index: -1;
+  }
+  
+  .boxes:hover {
+	background-color: rgb(0, 0, 0, .5);
+  }
+
+  a {
+	color:white;
+	text-decoration:none
+  }
+
+  body {
+	align-content: center;
+	color: white;
+	text-align: center;
+  }
