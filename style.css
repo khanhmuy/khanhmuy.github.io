@@ -44,3 +44,7 @@ img {
     padding-left: 8px;
     padding-right: 8px;
 }
+
+img:hover {
+    opacity: 0.8;
+}
