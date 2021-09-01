@@ -38,13 +38,13 @@ li {
     padding: 4px;
 }
 
-img {
+.sociallink {
     width: 45px;
     height: 45px;
     padding-left: 8px;
     padding-right: 8px;
 }
 
-img:hover {
+.sociallink:hover {
     opacity: 0.8;
 }
