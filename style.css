@@ -6,7 +6,7 @@ body {
 
 .top {
     position: relative;
-    top: 190px;
+    top: 160px;
     margin-left: 90px;
 }
 
@@ -17,7 +17,6 @@ body {
 }
 
 .greeting:hover {
-    transform: scale(1.0001);
     color: #ffccff;
 }
 
