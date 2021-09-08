@@ -13,11 +13,11 @@ body {
 .greeting {
     color: #ccffff;
     font-size: 35px;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .greeting:hover {
-    scale: 1.2;
+    transform: scale(1.0001);
     color: #ffccff;
 }
 
@@ -28,7 +28,7 @@ body {
 
 .twitter {
     color: #00ccff;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     text-decoration: none;
     filter: saturate(0%);
     width: 17px;
@@ -41,7 +41,7 @@ body {
 
 .discord {
     color: #5865f2;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
     text-decoration: none;
     filter: saturate(0%);
 }
@@ -49,6 +49,18 @@ body {
 .discord:hover {
     filter: saturate(100%);
 }
+
+.github {
+    color: white;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    filter: invert(50%);
+}
+
+.github:hover {
+    filter: invert(0%);
+}
+
 
 .socialimg {
     width: 20px;
@@ -61,7 +73,7 @@ body {
 
 .toolbox {
     color: #d9d9d9;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .toolbox:hover {
@@ -70,7 +82,7 @@ body {
 
 .yt {
     color: #d9d9d9;
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .yt:hover {
