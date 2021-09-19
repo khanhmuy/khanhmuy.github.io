@@ -11,7 +11,7 @@ body {
 }
 
 .greeting {
-    color: #ccffff;
+    color: lightskyblue;
     font-size: 35px;
     transition: all .2s ease-in-out;
 }
@@ -68,16 +68,6 @@ body {
     vertical-align: middle;
     margin-left: 3px;
     margin-right: 1px;
-}
-
-.toolbox {
-    color: #666666;
-    text-decoration: none;
-    transition: all .2s ease-in-out;
-}
-
-.toolbox:hover {
-    color: lightskyblue;
 }
 
 .yt {
