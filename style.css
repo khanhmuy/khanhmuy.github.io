@@ -11,7 +11,7 @@ body {
 }
 
 .greeting {
-    color: lightskyblue;
+    color: #ccffff;
     font-size: 35px;
     transition: all .2s ease-in-out;
 }
