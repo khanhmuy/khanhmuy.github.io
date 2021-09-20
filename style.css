@@ -1,7 +1,7 @@
 body {
     font-family: Inter;
-    color: white;
-    background-color: #121212;
+    color: #575757;
+    background-color: #faffed;
 }
 
 .top {
@@ -11,17 +11,17 @@ body {
 }
 
 .greeting {
-    color: #ccffff;
+    color: #707070;
     font-size: 35px;
     transition: all .2s ease-in-out;
 }
 
 .greeting:hover {
-    color: #ffccff;
+    color: #ff8ee3;
 }
 
 .info {
-    color: #d9d9d9;
+    color: #575757;
     margin-bottom: 1px;
 }
 
@@ -50,14 +50,14 @@ body {
 }
 
 .github {
-    color: white;
+    color: #ffffff;
     transition: all .2s ease-in-out;
     text-decoration: none;
     filter: invert(50%);
 }
 
 .github:hover {
-    filter: invert(0%);
+    filter: invert(25%);
 }
 
 
@@ -71,13 +71,28 @@ body {
 }
 
 .yt {
-    color: #666666;
+    color: #575757;
     text-decoration: none;
     transition: all .2s ease-in-out;
 }
 
 .yt:hover {
     color: #ff3d3d;
+}
+
+.pfp {
+    float: right;
+    margin-right: 90px;
+    position: relative;
+    bottom: 200px;
+    width: 400px;
+    height: 400px;
+    vertical-align: middle;
+    transition: all .2s ease-in-out;
+}
+
+.pfp:hover {
+    transform: scale(1.02);
 }
 
 @media screen and (max-width: 900px) {
@@ -88,5 +103,9 @@ body {
     }
     body {
         text-align: center;
+    }
+    
+    .pfp {
+        display: none;
     }
 }
