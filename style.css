@@ -6,7 +6,7 @@ body {
 
 .top {
     position: relative;
-    top: 160px;
+    top: 155px;
     margin-left: 90px;
 }
 
@@ -92,12 +92,25 @@ body {
 }
 
 .pfp:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
+.noselect {
+    -webkit-touch-callout: none; 
+      -webkit-user-select: none; 
+       -khtml-user-select: none; 
+         -moz-user-select: none; 
+          -ms-user-select: none; 
+              user-select: none; 
+  }
+
 @media screen and (max-width: 900px) {
+    .greeting {
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
     .top {
-        margin: 10px;
+        margin: 5px;
         position: relative;
         top: 40px;
     }
