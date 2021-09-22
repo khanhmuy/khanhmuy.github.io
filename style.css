@@ -2,12 +2,14 @@ body {
     font-family: Inter;
     color: #575757;
     background-color: #faffed;
+    transition: all .2s ease-in-out;
 }
 
-.top {
+#top {
     position: relative;
     top: 155px;
     margin-left: 90px;
+    color: #575757;
 }
 
 .greeting {
@@ -76,6 +78,10 @@ body {
     transition: all .2s ease-in-out;
 }
 
+.ytdark {
+    color: white;
+}
+
 .yt:hover {
     color: #ff3d3d;
 }
@@ -88,11 +94,11 @@ body {
     width: 400px;
     height: 400px;
     vertical-align: middle;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .pfp:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 .noselect {
@@ -103,6 +109,37 @@ body {
           -ms-user-select: none; 
               user-select: none; 
   }
+
+.button {
+    text-decoration: none;
+    text-align: center;
+    transition: all .4s ease-in-out;
+    padding: 0px;
+    position: relative;
+    margin-right: 5px;
+    float: right;
+    border: none;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(red, green, blue, 1);
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.darkbutton {
+    background-color: #121212;
+}
+
+.darkmode {
+    background-color: #121212;
+    color: white;
+}
+
+#darktop {
+    color: white;
+}
 
 @media screen and (max-width: 900px) {
     .greeting {
@@ -119,6 +156,10 @@ body {
     }
     
     .pfp {
+        display: none;
+    }
+
+    .button {
         display: none;
     }
 }
