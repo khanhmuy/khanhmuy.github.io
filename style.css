@@ -7,15 +7,14 @@ body {
 
 #top {
     position: relative;
-    top: 155px;
+    top: 50%px;
+    transform: translateY(50%);
     margin-left: 90px;
-    color: #575757;
 }
 
 .greeting {
-    color: #707070;
     font-size: 35px;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .greeting:hover {
@@ -23,7 +22,6 @@ body {
 }
 
 .info {
-    color: #575757;
     margin-bottom: 1px;
 }
 
@@ -134,12 +132,9 @@ body {
 
 .darkmode {
     background-color: #121212;
-    color: white;
+    color: rgb(196, 196, 196);
 }
 
-#darktop {
-    color: white;
-}
 
 @media screen and (max-width: 900px) {
     .greeting {
