@@ -7,8 +7,7 @@ body {
 
 #top {
     position: relative;
-    top: 50%;
-    transform: translateY(50%);
+    top: 145px;
     margin-left: 90px;
 }
 
@@ -25,49 +24,33 @@ body {
     margin-bottom: 1px;
 }
 
-.twitter {
-    color: #00ccff;
-    transition: all .2s ease-in-out;
-    text-decoration: none;
+.socialimg {
+    width: 27px;
+    height: 27px;
+    display: inline;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.twdsc {
     filter: saturate(0%);
-    width: 17px;
-    height: 17px;
-}
-
-.twitter:hover {
-    filter: saturate(100%);
-}
-
-.discord {
-    color: #5865f2;
     transition: all .2s ease-in-out;
-    text-decoration: none;
-    filter: saturate(0%);
 }
 
-.discord:hover {
+.twdsc:hover {
     filter: saturate(100%);
+    transform: scale(1.01);
 }
 
 .github {
-    color: #ffffff;
+    filter: invert(60%);
     transition: all .2s ease-in-out;
-    text-decoration: none;
-    filter: invert(50%);
 }
 
 .github:hover {
-    filter: invert(25%);
-}
-
-
-.socialimg {
-    width: 20px;
-    height: 20px;
-    display: inline;
-    vertical-align: middle;
-    margin-left: 3px;
-    margin-right: 1px;
+    filter: invert(20%);
+    transform: scale(1.01);
 }
 
 .yt {
@@ -82,6 +65,27 @@ body {
 
 .yt:hover {
     color: #ff3d3d;
+}
+
+.toolbox {
+    color:rgb(121, 121, 121);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.toolbox:hover {
+    color: lightskyblue
+}
+
+.eider {
+    color: #5865f2;
+    filter: saturate(10%);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.eider:hover {
+    filter: saturate(100%);
 }
 
 .pfp {
@@ -106,35 +110,22 @@ body {
          -moz-user-select: none; 
           -ms-user-select: none; 
               user-select: none; 
-  }
+}
 
-.button {
-    text-decoration: none;
+.social-desktop {
     text-align: center;
-    transition: all .4s ease-in-out;
-    padding: 0px;
+    align-content: center;
     position: relative;
-    margin-right: 5px;
-    float: right;
-    border: none;
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(red, green, blue, 1);
-    border: none;
-    outline: none;
-    box-shadow: none;
+    top: 25px;
 }
 
-.darkbutton {
-    background-color: #121212;
+.social-mobile {
+    text-align: center;
+    align-content: center;
+    position: relative;
+    top: 25px;
+    display: none;
 }
-
-.darkmode {
-    background-color: #121212;
-    color: rgb(196, 196, 196);
-}
-
 
 @media screen and (max-width: 900px) {
     .greeting {
@@ -155,7 +146,11 @@ body {
         display: none;
     }
 
-    .button {
+    .social-desktop {
         display: none;
+    }
+
+    .social-mobile {
+        display: block;
     }
 }
