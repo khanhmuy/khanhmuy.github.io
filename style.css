@@ -7,7 +7,7 @@ body {
 
 #top {
     position: relative;
-    top: 145px;
+    top: 125px;
     margin-left: 90px;
 }
 
@@ -87,6 +87,26 @@ body {
     color: #5865f2;
 }
 
+.shitc0ver {
+    color: rgb(121, 121, 121);
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
+.shitc0ver:hover {
+    color: rgba(56, 142, 255, 0.842);
+}
+
+.nitroless {
+    color: rgb(121, 121, 121);
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+
+.nitroless:hover {
+    color: #121212;
+}
+
 .pfp {
     float: right;
     margin-right: 90px;
@@ -164,5 +184,8 @@ body {
 
     .social-mobile {
         display: block;
+    }
+    .info {
+        margin-bottom: 0px;
     }
 }
