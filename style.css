@@ -111,9 +111,9 @@ body {
     float: right;
     margin-right: 90px;
     position: relative;
-    bottom: 200px;
-    width: 400px;
-    height: 400px;
+    bottom: 110px;
+    width: 250px;
+    height: 250px;
     vertical-align: middle;
     transition: all .4s ease-in-out;
 }
@@ -123,10 +123,11 @@ body {
 }
 
 .pfp-mobile {
+    padding-top: 10px;
     text-align: center;
     align-content: center;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     display: none;
     transition: all .4s ease-in-out;
 }
