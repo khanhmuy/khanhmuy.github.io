@@ -4,7 +4,7 @@ function display() {
             var isIE = (navigator.appName == "Microsoft Internet Explorer");
         //if the browser is Microsoft Internet Explorer, show massive warning
         if (isIE) {
-            alert("You are using Internet Explorer (what the fuck it's so fucking shit). This will not work.\nPlease download a real browser.\nhttp://www.mozilla.org/firefox/");
+            alert("You are using Internet Explorer (what the fuck it's so fucking old and shit). This will not work.\nPlease download a real browser.\nhttp://www.mozilla.org/firefox/");
         };
         // warn user if browser is chrome
         if (navigator.userAgent.indexOf("Chrome") > -1) {
