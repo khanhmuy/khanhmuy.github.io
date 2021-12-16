@@ -2,7 +2,6 @@ body {
     font-family: Inter;
     color: #575757;
     background-color: #faffed;
-    transition: all .2s ease-in-out;
 }
 
 #top {
@@ -44,17 +43,12 @@ body {
     text-decoration: none;
     transition: all .2s ease-in-out;
 }
-
-.ytdark {
-    color: white;
-}
-
 .yt:hover {
     color: #ff3d3d;
 }
 
-.toolbox {
-    color:rgb(121, 121, 121);
+.toolbox, .eider, .shitc0ver, .nitroless {
+    color: inherit;
     text-decoration: underline;
     transition: all .3s ease-in-out;
 }
@@ -63,30 +57,12 @@ body {
     color: lightskyblue
 }
 
-.eider {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
-}
-
 .eider:hover {
     color: #5865f2;
 }
 
-.shitc0ver {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
-}
-
 .shitc0ver:hover {
     color: rgba(56, 142, 255, 0.842);
-}
-
-.nitroless {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
 }
 
 .nitroless:hover {
@@ -95,27 +71,17 @@ body {
 
 .pfp {
     float: right;
-    margin-right: 90px;
+    margin-right: 130px;
     position: relative;
     bottom: 110px;
     width: 250px;
     height: 250px;
     vertical-align: middle;
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .pfp:hover {
-    transform: scale(1.02);
-}
-
-.pfp-mobile {
-    padding-top: 10px;
-    text-align: center;
-    align-content: center;
-    width: 50px;
-    height: 50px;
-    display: none;
-    transition: all .4s ease-in-out;
+    transform: scale(1.005);
 }
 
 .noselect {
@@ -159,10 +125,6 @@ body {
     
     .pfp {
         display: none;
-    }
-
-    .pfp-mobile {
-        display: inline-block;
     }
 
     .social-desktop {
