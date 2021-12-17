@@ -2,6 +2,12 @@ body {
     font-family: Inter;
     color: #575757;
     background-color: #faffed;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 #top {
@@ -84,13 +90,14 @@ body {
     transform: scale(1.005);
 }
 
-.noselect {
-    -webkit-touch-callout: none; 
-      -webkit-user-select: none; 
-       -khtml-user-select: none; 
-         -moz-user-select: none; 
-          -ms-user-select: none; 
-              user-select: none; 
+#firefox, #notfirefox {
+    display: none;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    align-content: center;
+    text-align: center;
 }
 
 .social-desktop {
