@@ -86,10 +86,6 @@ body {
     transition: all .3s ease-in-out;
 }
 
-.pfp:hover {
-    transform: scale(1.005);
-}
-
 #firefox, #notfirefox {
     display: none;
     font-size: 10px;
