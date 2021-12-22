@@ -1,7 +1,7 @@
 body {
     font-family: Inter;
-    color: #575757;
-    background-color: #faffed;
+    color: #d8d8d8;
+    background-color: #121212;
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
     -khtml-user-select: none; 
@@ -37,17 +37,17 @@ body {
     margin-left: 8px;
     margin-right: 8px;
     transition: ease-in-out .3s;
-    filter: invert(55%);
+    filter: invert(50%);
 }
 
 .social:hover {
-    filter: invert(10%);
+    filter: invert(100%);
 }
 
 .yt {
-    color: #575757;
+    color: inherit;
     text-decoration: none;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .yt:hover {
     color: #ff3d3d;
@@ -72,7 +72,7 @@ body {
 }
 
 .nitroless:hover {
-    color: #121212;
+    color: #b8b8b8;
 }
 
 .pfp {
