@@ -1,7 +1,7 @@
 body {
     font-family: Inter;
-    color: #d8d8d8;
-    background-color: #121212;
+    color: #575757;
+    background-color: #faffed;
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
     -khtml-user-select: none; 
@@ -37,11 +37,11 @@ body {
     margin-left: 8px;
     margin-right: 8px;
     transition: ease-in-out .3s;
-    filter: invert(50%);
+    filter: invert(55%);
 }
 
 .social:hover {
-    filter: invert(100%);
+    filter: invert(5%);
 }
 
 .yt {
