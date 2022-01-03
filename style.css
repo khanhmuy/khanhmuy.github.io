@@ -1,3 +1,7 @@
+html {
+    min-height: 100%;
+    overscroll-behavior: none;
+}
 body {
     font-family: Inter;
     color: #575757;
