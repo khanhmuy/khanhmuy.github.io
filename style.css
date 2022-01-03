@@ -2,6 +2,9 @@ body {
     font-family: Inter;
     color: #575757;
     background-color: #faffed;
+    background: -webkit-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
+    background: -moz-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
+    background: linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
     -khtml-user-select: none; 
