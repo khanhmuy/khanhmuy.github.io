@@ -9,33 +9,22 @@ body {
     background: -webkit-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
     background: -moz-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
     background: linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
 }
-
 #top {
     position: relative;
     top: 125px;
     margin-left: 90px;
 }
-
 .greeting {
     font-size: 35px;
     transition: all .3s ease-in-out;
 }
-
 .greeting:hover {
     color: #ffc0dd;
 }
-
 .info {
     margin-bottom: 1px;
 }
-
 .social {
     width: 22px;
     height: 22px;
@@ -46,42 +35,34 @@ body {
     transition: ease-in-out .3s;
     filter: invert(55%);
 }
-
 .social:hover {
-    filter: invert(5%);
+    filter: invert(15%);
 }
-
-.yt {
-    color: inherit;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-}
-.yt:hover {
-    color: #ff3d3d;
-}
-
 .toolbox, .eider, .shitc0ver, .nitroless {
     color: inherit;
     text-decoration: underline;
     transition: all .3s ease-in-out;
 }
-
 .toolbox:hover {
     color: lightskyblue
 }
-
 .eider:hover {
     color: #5865f2;
 }
-
 .shitc0ver:hover {
     color: rgba(56, 142, 255, 0.842);
 }
-
 .nitroless:hover {
     color: #b8b8b8;
 }
-
+.llsc12 {
+    color: inherit;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+.llsc12:hover {
+    color: #fc2c35;
+}
 .pfp {
     float: right;
     margin-right: 130px;
@@ -92,24 +73,12 @@ body {
     vertical-align: middle;
     transition: all .3s ease-in-out;
 }
-
-#firefox, #notfirefox {
-    display: none;
-    font-size: 10px;
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-    align-content: center;
-    text-align: center;
-}
-
 .social-desktop {
     text-align: center;
     align-content: center;
     position: relative;
     top: 25px;
 }
-
 .social-mobile {
     text-align: center;
     align-content: center;
@@ -117,7 +86,6 @@ body {
     top: 25px;
     display: none;
 }
-
 @media screen and (max-width: 900px) {
     .greeting {
         font-size: 30px;
