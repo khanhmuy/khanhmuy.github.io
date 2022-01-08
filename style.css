@@ -87,6 +87,10 @@ body {
     display: none;
 }
 @media screen and (max-width: 900px) {
+    html {
+        min-height: 100%;
+        overscroll-behavior: none;
+    }
     .greeting {
         font-size: 30px;
         padding-bottom: 15px;
@@ -99,6 +103,7 @@ body {
     }
     body {
         text-align: center;
+        margin: 10px;
     }
     
     .pfp {
