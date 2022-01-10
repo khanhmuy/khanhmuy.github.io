@@ -97,6 +97,7 @@ body {
     top: 25px;
     display: none;
     padding-bottom: 13px;
+    padding-top: 7px;
 }
 @media screen and (max-width: 900px) {
     html {
