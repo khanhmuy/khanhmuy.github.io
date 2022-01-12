@@ -106,18 +106,18 @@ body {
         font-size: 14px;
     }
     .greeting {
-        font-size: 30px;
-        padding-bottom: 15px;
+        font-size: 25px;
+        padding-bottom: 13px;
     }
     #top {
         margin: 5px;
         position: relative;
-        top: 30px;
+        top: 20px;
         transform: none;
     }
     body {
         text-align: center;
-        margin: 15px;
+        margin: 10px;
     }
     
     .pfp {
