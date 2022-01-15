@@ -4,138 +4,89 @@ html {
 }
 body {
     font-family: Inter;
-    color: #575757;
-    background-color: #faffed;
-    background: linear-gradient(-45deg, #ffd5e7, #FCF7F8, #dcf0ff);
-	background-size: 400% 400%;
-	animation: gradient 11s ease infinite;
+    color: white;
+    background-color: black;
 }
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+p {
+    margin: 2px;
 }
-#top {
-    position: relative;
-    top: 125px;
-    margin-left: 90px;
+a {
+    color: inherit;
 }
-.greeting {
-    font-size: 35px;
-    transition: all .3s ease-in-out;
+h1 {
+    text-shadow: 0 0 5px #ffc0dd;
 }
-.greeting:hover {
+h2 {
+    margin: 2px;
+    font-size: 21px;
+}
+h3 {
+    margin: 2px;
+    font-size: 16px;
+}
+img {
+    vertical-align: center;
+}
+.main-container {
+    top: 50%;
+    left: 50%;
+    width: 22em;
+    height: 33em;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    vertical-align: middle;
+    margin-left: 7px;
+}
+.ml {
     color: #ffc0dd;
 }
-.info {
-    margin-bottom: 1px;
-}
 .social {
-    width: 22px;
-    height: 22px;
-    display: inline;
-    vertical-align: middle;
-    margin-left: 8px;
-    margin-right: 8px;
-    transition: ease-in-out .3s;
-    filter: invert(55%);
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    margin-right: 5px;
+    filter: invert(50%);
+    transition: ease-in-out 0.3s;
 }
 .social:hover {
-    filter: invert(15%);
+    filter: invert(100%);
 }
-.toolbox, .eider, .shitc0ver, .nitroless {
+.subtitle {
+    font-size: 15px;
+    margin: 1px;
+    text-align: left;
+}
+.about {
+    font-size: 15px;
+}
+.greeting {
+    color: inherit;
+    transition: ease-in-out 0.2s;
+} .greeting:hover {
+    color: #c0ddff;
+    text-shadow: 0 0 4px #c0ddff;
+}
+.toolbox, .eider, .nitroless {
     color: inherit;
     text-decoration: underline;
     transition: all .3s ease-in-out;
 }
 .toolbox:hover {
-    color: lightskyblue
+    color: lightskyblue;
+    text-shadow: 0 0 4px lightskyblue;
 }
 .eider:hover {
     color: #5865f2;
-}
-.shitc0ver:hover {
-    color: rgba(56, 142, 255, 0.842);
+    text-shadow: 0 0 4px #5865f2;
 }
 .nitroless:hover {
-    color: #b8b8b8;
-}
-.llsc12 {
-    color: inherit;
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
-}
-.llsc12:hover {
-    color: #fc2c35;
-}
-.pfp {
-    float: right;
-    margin-right: 130px;
-    position: relative;
-    bottom: 110px;
-    width: 250px;
-    height: 250px;
-    vertical-align: middle;
-    transition: all .3s ease-in-out;
-}
-.social-desktop {
-    text-align: center;
-    align-content: center;
-    position: relative;
-    top: 25px;
-}
-.social-mobile {
-    text-align: center;
-    align-content: center;
-    position: relative;
-    top: 25px;
-    display: none;
-    padding-bottom: 13px;
-    padding-top: 7px;
+    color: gray;
+    text-shadow: 0 0 4px gray;
 }
 @media screen and (max-width: 900px) {
-    html {
-        min-height: 100%;
-        overscroll-behavior: none;
-        font-size: 14px;
-    }
-    .greeting {
-        font-size: 25px;
-        padding-bottom: 13px;
-    }
-    #top {
-        margin: 5px;
-        position: relative;
-        top: 20px;
-        transform: none;
-    }
-    body {
-        text-align: center;
-        margin: 10px;
-    }
-    
-    .pfp {
-        display: none;
-    }
-
-    .social-desktop {
-        display: none;
-    }
-
-    .social-mobile {
-        display: block;
-    }
-    .info {
-        margin-bottom: 0px;
-    }
-    .social {
-        width: 25px;
-        height: 25px;
+    .main-container {
+        width: 19em;
     }
 }
