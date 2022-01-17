@@ -26,7 +26,7 @@ h3 {
 img {
     vertical-align: center;
 }
-#main-container, #intro-container {
+#main-container {
     top: 50%;
     left: 50%;
     width: 22em;
@@ -37,38 +37,6 @@ img {
     position: fixed;
     vertical-align: middle;
     margin-left: 7px;
-}
-#main-container {
-    display: none;
-}
-#intro-container {
-    display: block;
-}
-#intro-text {
-    font-size: 0em;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    vertical-align: middle;
-    animation-name: intro;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    background: linear-gradient(to right, #ddffc0, #c0ddff 40%, #ffc0dd);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-}
-@keyframes intro {
-    0% {
-        font-size: 0.001em;
-    }
-    100% {
-        font-size: 4em;
-    }
 }
 .ml {
     background: linear-gradient(to right, #ddffc0, #c0ddff 40%, #ffc0dd);
@@ -100,7 +68,7 @@ img {
     transition: ease-in-out 0.2s;
 } .greeting:hover {
     color: #c0ddff;
-    text-shadow: 0 0 4px #c0ddff;
+    text-shadow: 0 0 2px #c0ddff;
 }
 .toolbox, .eider, .nitroless {
     color: inherit;
@@ -108,18 +76,19 @@ img {
 }
 .toolbox:hover {
     color: lightskyblue;
-    text-shadow: 0 0 4px lightskyblue;
+    text-shadow: 0 0 2px lightskyblue;
 }
 .eider:hover {
     color: #5865f2;
-    text-shadow: 0 0 4px #5865f2;
+    text-shadow: 0 0 2px #5865f2;
 }
 .nitroless:hover {
     color: gray;
-    text-shadow: 0 0 4px gray;
+    text-shadow: 0 0 2px gray;
 }
 @media screen and (max-width: 900px) {
     #main-container {
         width: 19em;
+        height: 32em;
     }
 }
