@@ -68,7 +68,6 @@ img {
     transition: ease-in-out 0.2s;
 } .greeting:hover {
     color: #c0ddff;
-    text-shadow: 0 0 2px #c0ddff;
 }
 .toolbox, .eider, .nitroless {
     color: inherit;
@@ -76,15 +75,12 @@ img {
 }
 .toolbox:hover {
     color: lightskyblue;
-    text-shadow: 0 0 2px lightskyblue;
 }
 .eider:hover {
     color: #5865f2;
-    text-shadow: 0 0 2px #5865f2;
 }
 .nitroless:hover {
     color: gray;
-    text-shadow: 0 0 2px gray;
 }
 @media screen and (max-width: 900px) {
     #main-container {
