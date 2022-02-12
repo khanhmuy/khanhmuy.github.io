@@ -29,8 +29,8 @@ img {
 #main-container {
     top: 50%;
     left: 50%;
-    width: 22em;
-    height: 33em;
+    width: 30em;
+    height: 30em;
     padding-left: 10px;
     padding-right: 10px;
     transform: translate(-50%, -50%);
