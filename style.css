@@ -84,8 +84,17 @@ img {
     color: gray;
 }
 @media screen and (max-width: 900px) {
+    p {
+        font-size: 13px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 14px;
+    }
     #main-container {
-        width: 19em;
+        width: 20em;
         height: 34em;
     }
 }
