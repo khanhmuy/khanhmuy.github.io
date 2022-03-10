@@ -16,22 +16,10 @@
             font-family: Inter;
             color: #575757;
             background-color: #faffed;
-            background: linear-gradient(-45deg, #ffd5e7, #FCF7F8, #dcf0ff);
-	        background-size: 400% 400%;
-	        animation: gradient 11s ease infinite;
-	        height: 100vh;
+            background: -webkit-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
+            background: -moz-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
+            background: linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
             text-align: center;
-        }
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
         }
         h2 {
             font-size: 37px
@@ -60,7 +48,7 @@
     <body>
         <h2>404, something's not right</h2>
         <p>the page you are looking for does not exist.</p>
-        <p>here's a picture of king kong balls while you contemplate your life choices</p>
+        <p>here's a picture of king kong balls while you are contemplating your life choices</p>
         <img src="assets/balls.jpg" alt="king kong balls" class="balls">
         <br><br>
         <p>you can also try going back to the <a href="https://khanhmuy.github.io" class="link">homepage</a></p>
