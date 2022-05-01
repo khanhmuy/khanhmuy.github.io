@@ -11,9 +11,13 @@ body {
     background: linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
 }
 #top {
-    position: relative;
-    top: 125px;
-    margin-left: 90px;
+    width: 80%;
+    margin-left: 80px;
+    margin-right: 50px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .greeting {
     font-size: 35px;
@@ -55,17 +59,8 @@ body {
 .nitroless:hover {
     color: #b8b8b8;
 }
-.llsc12 {
-    color: inherit;
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
-}
-.llsc12:hover {
-    color: #fc2c35;
-}
 .pfp {
     float: right;
-    margin-right: 130px;
     position: relative;
     bottom: 110px;
     width: 250px;
@@ -103,6 +98,7 @@ body {
         position: relative;
         top: 20px;
         transform: none;
+        width: auto;
     }
     body {
         text-align: center;
