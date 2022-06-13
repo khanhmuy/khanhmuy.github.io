@@ -30,8 +30,8 @@ body {
     margin-bottom: 1px;
 }
 .social {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     display: inline;
     vertical-align: middle;
     margin-left: 8px;
@@ -42,7 +42,7 @@ body {
 .social:hover {
     filter: invert(15%);
 }
-.toolbox, .eider, .shitc0ver, .nitroless {
+.toolbox, .eider, .shitc0ver, .nitroless, .toast {
     color: inherit;
     text-decoration: underline;
     transition: all .3s ease-in-out;
@@ -58,6 +58,9 @@ body {
 }
 .nitroless:hover {
     color: #b8b8b8;
+}
+.toast:hover {
+    color: rgb(255, 241, 45);
 }
 .pfp {
     float: right;
