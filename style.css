@@ -1,129 +1,30 @@
-html {
-    min-height: 100%;
-    overscroll-behavior: none;
-}
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
     font-family: Inter;
-    color: #575757;
-    background-color: #faffed;
-    background: -webkit-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
-    background: -moz-linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
-    background: linear-gradient(top left, #dcf0ff,#FCF7F8, #ffd5e7);
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #121212;
 }
-#top {
-    width: 80%;
-    margin-left: 80px;
-    margin-right: 50px;
+
+html {
+    scroll-behavior: smooth;
+    overflow-x:hidden !important;
+}
+
+.center {
+    margin: 0;
     position: absolute;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-.greeting {
-    font-size: 35px;
-    transition: all .3s ease-in-out;
-}
-.greeting:hover {
-    color: #ffc0dd;
-}
-.info {
-    margin-bottom: 1px;
-}
-.social {
-    width: 24px;
-    height: 24px;
-    display: inline;
-    vertical-align: middle;
-    margin-left: 8px;
-    margin-right: 8px;
-    transition: ease-in-out .3s;
-    filter: invert(55%);
-}
-.social:hover {
-    filter: invert(15%);
-}
-.toolbox, .eider, .shitc0ver, .nitroless, .toast {
-    color: inherit;
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
-}
-.toolbox:hover {
-    color: lightskyblue
-}
-.eider:hover {
-    color: #5865f2;
-}
-.shitc0ver:hover {
-    color: rgba(56, 142, 255, 0.842);
-}
-.nitroless:hover {
-    color: #b8b8b8;
-}
-.toast:hover {
-    color: rgb(255, 241, 45);
-}
-.pfp {
-    float: right;
-    position: relative;
-    bottom: 110px;
-    width: 250px;
-    height: 250px;
-    vertical-align: middle;
-    transition: all .3s ease-in-out;
-}
-.social-desktop {
-    text-align: center;
-    align-content: center;
-    position: relative;
-    top: 25px;
-}
-.social-mobile {
-    text-align: center;
-    align-content: center;
-    position: relative;
-    top: 25px;
-    display: none;
-    padding-bottom: 13px;
-    padding-top: 7px;
-}
-@media screen and (max-width: 900px) {
-    html {
-        min-height: 100%;
-        overscroll-behavior: none;
-        font-size: 14px;
-    }
-    .greeting {
-        font-size: 25px;
-        padding-bottom: 13px;
-    }
-    #top {
-        margin: 5px;
-        position: relative;
-        top: 20px;
-        transform: none;
-        width: auto;
-    }
-    body {
-        text-align: center;
-        margin: 10px;
-    }
-    
-    .pfp {
-        display: none;
-    }
 
-    .social-desktop {
-        display: none;
-    }
-
-    .social-mobile {
-        display: block;
-    }
-    .info {
-        margin-bottom: 0px;
-    }
-    .social {
-        width: 25px;
-        height: 25px;
-    }
+.icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
 }
