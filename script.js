@@ -4,32 +4,9 @@ function displayTime() {
 
     const timeNow = new Date();
 
-    let hoursOfDay = timeNow.getHours();
-    let minutes = timeNow.getMinutes();
-    let seconds = timeNow.getSeconds();
-    let weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    let today = weekDay[timeNow.getDay()];
     let months = timeNow.toLocaleString("default", {
         month: "long"
     });
-    let year = timeNow.getFullYear();
-    let period = "AM";
-
-    if (hoursOfDay > 12) {
-        hoursOfDay-= 12;
-        period = "PM";
-    }
-
-    if (hoursOfDay === 0) {
-        hoursOfDay = 12;
-        period = "AM";
-    }
-
-    hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    let time = hoursOfDay + ":" + minutes + ":" + seconds + period;
 
     let date = timeNow.getDate();
     if (date === 1 || date === 21 || date === 31) {
@@ -45,7 +22,6 @@ function displayTime() {
         date += "th";
     }
 
-    document.getElementById('clock').innerHTML = `${today}, ${date} ${months} ${year} • ${time}`;
     if (months == "June" && date == "30th" || months == "June" && date == "29th" || months == "July" && date == "1st" || months == "July" && date == "2nd") {
         document.getElementById('technoblade').style.display = "block";
     } else {
@@ -57,7 +33,6 @@ displayTime();
 async function fetchLanyard() {
     const res = await fetch('https://api.lanyard.rest/v1/users/272388882539085824');
     const data = await res.json();
-    console.log(data);
     
     const box = document.getElementById('discordBox');
     const discordStatus = document.getElementById('discordStatus');

@@ -28,3 +28,15 @@ html {
     margin-top: 0.35rem;
     margin-bottom: 0.35rem;
 }
+
+.projIcon {
+    width: 28px;
+    height: 28px;
+}
+
+.hoverScale {
+    transition: all 0.2s ease-in-out;
+}
+.hoverScale:hover {
+    transform: scale(1.05);
+}
