@@ -12,6 +12,24 @@ html {
     overflow-x:hidden !important;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+.link {
+    transition: all 0.2s ease-in-out;
+    text-decoration: #ffc0cb;
+}
+.link:hover {
+    color: #ffc0cb;
+}
+
 .center {
     margin: 0;
     position: absolute;
