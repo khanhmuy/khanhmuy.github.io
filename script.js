@@ -31,6 +31,7 @@ displayTime();
 async function fetchLanyard() {
     const res = await fetch('https://api.lanyard.rest/v1/users/272388882539085824');
     const data = await res.json();
+    console.log(data);
     
     const box = document.getElementById('discordBox');
     const discordStatus = document.getElementById('discordStatus');
@@ -40,8 +41,9 @@ async function fetchLanyard() {
     discordUser.innerHTML = `${data.data.discord_user.username}#${data.data.discord_user.discriminator}`;
     try {
         if (data.data.spotify.album) {
-            spotify.innerHTML = `Listening to: ${data.data.spotify.song} - ${data.data.spotify.artist}`;
+            spotify.innerHTML = `Listening to: ${data.data.spotify.artist} - ${data.data.spotify.song}`;
             document.getElementById('pfp').src = data.data.spotify.album_art_url;
+            document.getElementById('discordBox').href = `https://open.spotify.com/track/${data.data.spotify.track_id}`
         }
     } catch (error) {};
 
@@ -66,7 +68,14 @@ async function fetchLanyard() {
         discordStatus.innerHTML = "Offline / Invisible";
     }
 
-    if (data.data.activities[0].name === 'Custom Status') {
-        document.getElementById('customStatus').innerHTML = `${data.data.activities[0].emoji.name} ${data.data.activities[0].state}`;
-    }
+    try {
+        data.data.activities.forEach(activity => {
+            if (activity.name === 'Custom Status') {
+                document.getElementById('customStatus').innerHTML = `${activity.emoji.name} ${activity.state}`;
+            }
+            else if (activity.name === 'Visual Studio Code') {
+                document.getElementById('vscode').innerHTML = `${activity.state} - ${activity.details}`;
+            }
+        })
+    } catch(error) {};
 }
