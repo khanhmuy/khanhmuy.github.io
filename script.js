@@ -1,5 +1,3 @@
-setInterval(displayTime, 1000);
-
 function displayTime() {
 
     const timeNow = new Date();
