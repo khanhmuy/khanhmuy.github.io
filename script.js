@@ -31,7 +31,6 @@ displayTime();
 async function fetchLanyard() {
     const res = await fetch('https://api.lanyard.rest/v1/users/272388882539085824');
     const data = await res.json();
-    console.log(data);
     
     const box = document.getElementById('discordBox');
     const discordStatus = document.getElementById('discordStatus');
