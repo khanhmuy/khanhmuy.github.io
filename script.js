@@ -40,7 +40,7 @@ async function fetchLanyard() {
     discordUser.innerHTML = `${data.data.discord_user.username}#${data.data.discord_user.discriminator}`;
     try {
         if (data.data.spotify.album) {
-            spotify.innerHTML = `Listening to: ${data.data.spotify.artist} - ${data.data.spotify.song}`;
+            spotify.innerHTML = `Listening to: ${data.data.spotify.song} by ${data.data.spotify.artist}, on ${data.data.spotify.album}`;
             document.getElementById('pfp').src = data.data.spotify.album_art_url;
             document.getElementById('discordBox').href = `https://open.spotify.com/track/${data.data.spotify.track_id}`
         }
