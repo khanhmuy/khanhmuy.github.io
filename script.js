@@ -35,14 +35,23 @@ async function fetchLanyard() {
     const box = document.getElementById('discordBox');
     const discordStatus = document.getElementById('discordStatus');
     const discordUser = document.getElementById('discordUser');
-    const spotify = document.getElementById('spotify');
+
+    const track = document.getElementById('track');
+    const artist = document.getElementById('artist');
+    const album = document.getElementById('album');
+    console.log(data.data);
 
     discordUser.innerHTML = `${data.data.discord_user.username}#${data.data.discord_user.discriminator}`;
     try {
         if (data.data.spotify.album) {
-            spotify.innerHTML = `Listening to: ${data.data.spotify.song} by ${data.data.spotify.artist}, on ${data.data.spotify.album}`;
+            document.getElementById('spotify').style.display = "block";
+            track.innerHTML = `${data.data.spotify.song}`;
+            artist.innerHTML = `${data.data.spotify.artist}`;
+            album.innerHTML = `${data.data.spotify.album}`;
             document.getElementById('pfp').src = data.data.spotify.album_art_url;
             document.getElementById('discordBox').href = `https://open.spotify.com/track/${data.data.spotify.track_id}`
+        } else {
+            document.getElementById('spotify').style.display = "none";
         }
     } catch (error) {};
 
