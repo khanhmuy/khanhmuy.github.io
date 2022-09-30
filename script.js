@@ -28,6 +28,7 @@ function displayTime() {
 }
 displayTime();
 
+//feel free to comment how crappy this code is 💀
 async function fetchLanyard() {
     const res = await fetch('https://api.lanyard.rest/v1/users/272388882539085824');
     const data = await res.json();
@@ -39,7 +40,6 @@ async function fetchLanyard() {
     const track = document.getElementById('track');
     const artist = document.getElementById('artist');
     const album = document.getElementById('album');
-    console.log(data.data);
 
     discordUser.innerHTML = `${data.data.discord_user.username}#${data.data.discord_user.discriminator}`;
     try {
@@ -55,26 +55,32 @@ async function fetchLanyard() {
         }
     } catch (error) {};
 
-    switch (data.data.discord_status) {
-        case "online":
-            box.classList.replace('border-gray-800', 'border-green-500');
+    //bodge that works lmfaooooooooooo
+    const colors = [
+        "border-gray-800",
+        "border-gray-900",
+        "border-green-500",
+        "border-yellow-500",
+        "border-red-500"
+    ]
 
-        case "idle":
-            box.classList.replace('border-gray-800', 'border-yellow-500');
-        case "dnd":
-            box.classList.replace('border-gray-800', 'border-red-500');
-        case "offline":
-            box.classList.replace('border-gray-800', 'border-gray-900');
-    };
-    if (data.data.discord_status === 'online') {
-        discordStatus.innerHTML = "Online";
-    } else if (data.data.discord_status === 'idle') {
-        discordStatus.innerHTML = "Idle";
-    } else if (data.data.discord_status === 'dnd') {
-        discordStatus.innerHTML = "Do Not Disturb";
-    } else if (data.data.discord_status === 'offline') {
-        discordStatus.innerHTML = "Offline / Invisible";
-    }
+    colors.forEach(color => {
+        if (box.className.match(color)) {
+            if (data.data.discord_status === 'online') {
+                box.classList.replace(color , 'border-green-500');
+                discordStatus.innerHTML = "Online";
+            } else if (data.data.discord_status === 'idle') {
+                box.classList.replace(color, 'border-yellow-500');
+                discordStatus.innerHTML = "Idle";
+            } else if (data.data.discord_status === 'dnd') {
+                box.classList.replace(color, 'border-red-500');
+                discordStatus.innerHTML = "Do Not Disturb";
+            } else if (data.data.discord_status === 'offline') {
+                box.classList.replace(color, 'border-gray-900');
+                discordStatus.innerHTML = "Offline / Invisible";
+            }
+        }
+    })
 
     try {
         data.data.activities.forEach(activity => {
@@ -82,7 +88,12 @@ async function fetchLanyard() {
                 document.getElementById('customStatus').innerHTML = `${activity.emoji.name} ${activity.state}`;
             }
             else if (activity.name === 'Visual Studio Code') {
-                document.getElementById('vscode').innerHTML = `${activity.state} - ${activity.details}`;
+                document.getElementById('vscode').style.display = "block";
+                
+                const workspace = activity.state.slice(11);
+                const file = activity.details.slice(8);
+                document.getElementById('workspace').innerHTML = `${workspace}`;
+                document.getElementById('file').innerHTML = `${file}`;
             }
         })
     } catch(error) {};
