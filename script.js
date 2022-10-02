@@ -64,6 +64,22 @@ async function fetchLanyard() {
         "border-red-500"
     ]
 
+    try {
+        data.data.activities.forEach(activity => {
+            if (activity.name === 'Custom Status') {
+                document.getElementById('customStatus').style.display = "block";
+                document.getElementById('customStatus').innerHTML = `${activity.emoji.name} ${activity.state}`;
+            }
+            else if (activity.name === 'Visual Studio Code') {
+                document.getElementById('vscode').style.display = "block";
+                const workspace = activity.state.slice(11);
+                const file = activity.details.slice(8);
+                document.getElementById('workspace').innerHTML = `${workspace}`;
+                document.getElementById('file').innerHTML = `${file}`;
+            }
+        })
+    } catch(error) {};
+
     colors.forEach(color => {
         if (box.className.match(color)) {
             if (data.data.discord_status === 'online') {
@@ -78,23 +94,11 @@ async function fetchLanyard() {
             } else if (data.data.discord_status === 'offline') {
                 box.classList.replace(color, 'border-gray-900');
                 discordStatus.innerHTML = "Offline / Invisible";
+                document.getElementById('pfp').src = 'https://api.lanyard.rest/272388882539085824.png';
+                document.getElementById('customStatus').style.display = "none";
+                document.getElementById('spotify').style.display = "none";
+                document.getElementById('vscode').style.display = "none";
             }
         }
     })
-
-    try {
-        data.data.activities.forEach(activity => {
-            if (activity.name === 'Custom Status') {
-                document.getElementById('customStatus').innerHTML = `${activity.emoji.name} ${activity.state}`;
-            }
-            else if (activity.name === 'Visual Studio Code') {
-                document.getElementById('vscode').style.display = "block";
-                
-                const workspace = activity.state.slice(11);
-                const file = activity.details.slice(8);
-                document.getElementById('workspace').innerHTML = `${workspace}`;
-                document.getElementById('file').innerHTML = `${file}`;
-            }
-        })
-    } catch(error) {};
 }
