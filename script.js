@@ -68,7 +68,11 @@ async function fetchLanyard() {
         data.data.activities.forEach(activity => {
             if (activity.name === 'Custom Status') {
                 document.getElementById('customStatus').style.display = "block";
-                document.getElementById('customStatus').innerHTML = `${activity.emoji.name} ${activity.state}`;
+                if (activity.emoji == undefined) {
+                    document.getElementById('customStatus').innerHTML = `${activity.state}`;
+                } else {
+                    document.getElementById('customStatus').innerHTML = `${activity.emoji.name} ${activity.state}`;
+                }
             }
             else if (activity.name === 'Visual Studio Code') {
                 document.getElementById('vscode').style.display = "block";
