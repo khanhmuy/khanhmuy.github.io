@@ -22,8 +22,6 @@ function displayTime() {
 
     if (months == "June" && date == "30th" || months == "June" && date == "29th" || months == "July" && date == "1st" || months == "July" && date == "2nd") {
         document.getElementById('technoblade').style.display = "block";
-    } else {
-        document.getElementById('technoblade').style.display = "none";
     }
 }
 displayTime();
