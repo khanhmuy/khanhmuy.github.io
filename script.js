@@ -37,7 +37,6 @@ async function fetchLanyard() {
 
     const track = document.getElementById('track');
     const artist = document.getElementById('artist');
-    const album = document.getElementById('album');
 
     discordUser.innerHTML = `${data.data.discord_user.username}#${data.data.discord_user.discriminator}`;
     try {
@@ -45,7 +44,6 @@ async function fetchLanyard() {
             document.getElementById('spotify').style.display = "block";
             track.innerHTML = `${data.data.spotify.song}`;
             artist.innerHTML = `${data.data.spotify.artist}`;
-            album.innerHTML = `${data.data.spotify.album}`;
             document.getElementById('pfp').src = data.data.spotify.album_art_url;
             document.getElementById('discordBox').href = `https://open.spotify.com/track/${data.data.spotify.track_id}`
         } else {
