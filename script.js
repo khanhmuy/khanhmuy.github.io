@@ -77,14 +77,6 @@ async function fetchLanyard() {
                 document.getElementById('workspace').innerHTML = `${workspace}`;
                 document.getElementById('file').innerHTML = `${file}`;
             }
-            else if (activity.name === 'osu!') {
-                document.getElementById('osu').style.display = "block";
-                if (activity.state === 'Clicking circles') {
-                    document.getElementById('osu').innerHTML = `${activity.name} | ${activity.state} - ${activity.details}`;
-                } else {
-                    document.getElementById('osu').innerHTML = `${activity.name} | ${activity.state}`;
-                }
-            }
         })
     } catch(error) {};
 
