@@ -77,6 +77,10 @@ async function fetchLanyard() {
                 document.getElementById('workspace').innerHTML = `${workspace}`;
                 document.getElementById('file').innerHTML = `${file}`;
             }
+            else if (activity.name === 'Jellyfin') {
+                document.getElementById('jellyfin').style.display = "block";
+                document.getElementById('jellyfin').innerHTML = `${activity.details} | ${activity.state}`;
+            }
         })
     } catch(error) {};
 
@@ -97,6 +101,7 @@ async function fetchLanyard() {
                 document.getElementById('pfp').src = 'https://api.lanyard.rest/272388882539085824.png';
                 document.getElementById('customStatus').style.display = "none";
                 document.getElementById('spotify').style.display = "none";
+                document.getElementById('jellyfin').style.display = "none";
                 document.getElementById('vscode').style.display = "none";
             }
         }
