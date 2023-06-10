@@ -38,7 +38,7 @@ async function fetchLanyard() {
     const track = document.getElementById('track');
     const artist = document.getElementById('artist');
 
-    discordUser.innerHTML = `${data.data.discord_user.username}#${data.data.discord_user.discriminator}`;
+    discordUser.innerHTML = `${data.data.discord_user.username}`;
     try {
         if (data.data.spotify.album) {
             document.getElementById('spotify').style.display = "block";
