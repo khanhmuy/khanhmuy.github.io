@@ -26,24 +26,44 @@
 
         <!-- TailwindCSS -->
         <script src="https://cdn.tailwindcss.com"></script>
+        <script>            
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'light-base': '#eff1f5',
+                            'light-text': '#4c4f69',
+                            'latte-surface0': '#ccd0da',
+                            'dark-base': '#1e1e2e',
+                            'dark-text': '#b59c96',
+                            'mocha-green': '#a6e3a1',
+                            'mocha-yellow': '#f9e2af',
+                            'mocha-red': '#f38ba8',
+                            'mocha-pink': '#f5c2e7',
+                            'mocha-surface0': '#313244'
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
-    <body class="bg-white dark:bg-black text-black dark:text-white">
+    <body class="bg-light-base dark:bg-dark-base text-light-text dark:text-dark-text">
         <nav class="z-50 w-full flex justify-start items-center mx-auto max-w-4xl px-8 my-20">
-            <a aria-label="home" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200" href="/" title="go to home">
+            <a aria-label="home" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink" href="/" title="go to home">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18 w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                     <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
                 </svg>
             </a>
-            <a aria-label="projects" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200" href="/projects" title="(crappy) stuff i made">
+            <a aria-label="projects" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink" href="/projects" title="(crappy) stuff i made">
                 <span>/projects</span>
             </a>
-            <a aria-label="files" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200" href="https://files.hmuy.me" title="public files or sum">
+            <a aria-label="files" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink" href="https://files.hmuy.me" title="public files or sum">
                 <span>/files</span>
             </a>
         </nav>
         <div class="h-full lg:px-0 px-10">
             <div class="flex flex-col max-w-3xl mx-auto mb-10 sm:px-0">
-                <h3><span class="text-4xl font-semibold focus:outline-none mr-2 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200">hmuy's (crappy) projects</span></h3>
+                <h3><span class="text-4xl font-semibold focus:outline-none mr-2 transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink">hmuy's (crappy) projects</span></h3>
                 <span class="text-base text-gray-600 dark:text-gray-400 max-w-sm mt-0">
                     <p>Stuff that I made, or have worked on.</p>
                 </span>
@@ -119,16 +139,16 @@
                                 <div class="flex gap-2 items-center font-bold">Some other things I have worked / am working on</div>
                                 <div class="text-gray-600 dark:text-gray-300 boxLinks">
                                     <li>
-                                        <a href="https://crowdin.com/profile/khanhmuy" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">Vietnamese localisations </a>
-                                        for <a href="https://github.com/ppy/osu" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">osu!</a>,
-                                        <a href="https://github.com/elihwyma/Sileo" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">Sileo</a> 
-                                        and <a href="https://github.com/PojavLauncherTeam/PojavLauncher" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">PojavLauncher</a>
+                                        <a href="https://crowdin.com/profile/khanhmuy" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">Vietnamese localisations </a>
+                                        for <a href="https://github.com/ppy/osu" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">osu!</a>,
+                                        <a href="https://github.com/elihwyma/Sileo" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">Sileo</a> 
+                                        and <a href="https://github.com/PojavLauncherTeam/PojavLauncher" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">PojavLauncher</a>
                                     </li>
                                     <li>OpenCore EFI configs for the 
-                                        <a href="https://github.com/khanhmuy/hackintosh-inspiron-3458" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">Dell Inspiron 3458</a> and 
-                                        <a href="https://github.com/khanhmuy/hackintosh-x454lab" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">ASUS X455LAB</a>
+                                        <a href="https://github.com/khanhmuy/hackintosh-inspiron-3458" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">Dell Inspiron 3458</a> and 
+                                        <a href="https://github.com/khanhmuy/hackintosh-x454lab" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">ASUS X455LAB</a>
                                     </li>
-                                    <li>Various bits and pieces on my <a href="https://github.com/khanhmuy" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-pink-200 underline">GitHub</a></li>
+                                    <li>Various bits and pieces on my <a href="https://github.com/khanhmuy" target="_blank" class="transition duration-300 ease-in-out hover:text-pink-400 dark:hover:text-mocha-pink underline">GitHub</a></li>
                                 </div>
                             </div>
                         </div>

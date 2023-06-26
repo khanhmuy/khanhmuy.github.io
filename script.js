@@ -53,11 +53,11 @@ async function fetchLanyard() {
 
     //bodge that works lmfaooooooooooo
     const colors = [
-        "border-gray-800",
-        "border-gray-900",
-        "border-green-500",
-        "border-yellow-500",
-        "border-red-500"
+        "border-latte-surface0",
+        "border-mocha-surface0",
+        "border-mocha-green",
+        "border-mocha-yellow",
+        "border-mocha-red"
     ]
 
     try {
@@ -87,16 +87,16 @@ async function fetchLanyard() {
     colors.forEach(color => {
         if (box.className.match(color)) {
             if (data.data.discord_status === 'online') {
-                box.classList.replace(color , 'border-green-500');
+                box.classList.replace(color , 'border-mocha-green');
                 discordStatus.innerHTML = "Online";
             } else if (data.data.discord_status === 'idle') {
-                box.classList.replace(color, 'border-yellow-500');
+                box.classList.replace(color, 'border-mocha-yellow');
                 discordStatus.innerHTML = "Idle";
             } else if (data.data.discord_status === 'dnd') {
-                box.classList.replace(color, 'border-red-500');
+                box.classList.replace(color, 'border-mocha-red');
                 discordStatus.innerHTML = "Do Not Disturb";
             } else if (data.data.discord_status === 'offline') {
-                box.classList.replace(color, 'border-gray-900');
+                box.classList.replace(color, 'border-latte-surface0');
                 discordStatus.innerHTML = "Offline / Invisible";
                 document.getElementById('pfp').src = 'https://api.lanyard.rest/272388882539085824.png';
                 document.getElementById('customStatus').style.display = "none";
