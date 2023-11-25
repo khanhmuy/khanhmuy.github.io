@@ -47,7 +47,6 @@ async function fetchLanyard() {
   } catch (error) {}
 
   //bodge that works lmfaooooooooooo
-  const colors = ["border-latte-surface0", "border-mocha-surface0", "border-mocha-green", "border-mocha-yellow", "border-mocha-red"];
 
   try {
     for (const activity of data.activities) {
@@ -80,28 +79,41 @@ async function fetchLanyard() {
     }
   } catch (error) {}
 
+  const colors = [
+    "border-latte-surface0", 
+    "border-mocha-surface0", 
+    "dark:border-mocha-green",
+    "border-latte-green", 
+    "dark:border-mocha-yellow",
+    "border-latte-yellow", 
+    "dark:border-mocha-red",
+    "border-latte-red"
+  ];
   for (const color of colors) {
     if (!box.className.match(color)) {
-      return;
+      if (data.discord_status === "online") {
+        box.classList.remove(color);
+        box.classList.add("dark:border-mocha-green", "border-latte-green");
+        discordStatus.innerHTML = "Online";
+      } else if (data.discord_status === "idle") {
+        box.classList.remove(color);
+        box.classList.add("dark:border-mocha-yellow", "border-latte-yellow");
+        discordStatus.innerHTML = "Idle";
+      } else if (data.discord_status === "dnd") {
+        box.classList.remove(color);
+        box.classList.add("dark:border-mocha-red", "border-latte-red");
+        discordStatus.innerHTML = "Do Not Disturb";
+      } else if (data.discord_status === "offline") {
+        box.classList.remove(color);
+        box.classList.add("border-latte-surface0");
+        discordStatus.innerHTML = "Offline / Invisible";
+        document.getElementById("pfp").src = "https://api.lanyard.rest/272388882539085824.png";
+        document.getElementById("customStatus").style.display = "none";
+        document.getElementById("spotify").style.display = "none";
+        document.getElementById("jellyfin").style.display = "none";
+        document.getElementById("vscode").style.display = "none";
+      }
     }
 
-    if (data.discord_status === "online") {
-      box.classList.replace(color, "border-mocha-green");
-      discordStatus.innerHTML = "Online";
-    } else if (data.discord_status === "idle") {
-      box.classList.replace(color, "border-mocha-yellow");
-      discordStatus.innerHTML = "Idle";
-    } else if (data.discord_status === "dnd") {
-      box.classList.replace(color, "border-mocha-red");
-      discordStatus.innerHTML = "Do Not Disturb";
-    } else if (data.discord_status === "offline") {
-      box.classList.replace(color, "border-latte-surface0");
-      discordStatus.innerHTML = "Offline / Invisible";
-      document.getElementById("pfp").src = "https://api.lanyard.rest/272388882539085824.png";
-      document.getElementById("customStatus").style.display = "none";
-      document.getElementById("spotify").style.display = "none";
-      document.getElementById("jellyfin").style.display = "none";
-      document.getElementById("vscode").style.display = "none";
-    }
   }
 }
