@@ -89,22 +89,25 @@ async function fetchLanyard() {
     "dark:border-mocha-red",
     "border-latte-red"
   ];
+  function removeColors() {
+    box.classList.remove(...colors);
+  }
   for (const color of colors) {
     if (!box.className.match(color)) {
       if (data.discord_status === "online") {
-        box.classList.remove(color);
+        removeColors();
         box.classList.add("dark:border-mocha-green", "border-latte-green");
         discordStatus.innerHTML = "Online";
       } else if (data.discord_status === "idle") {
-        box.classList.remove(color);
+        removeColors();
         box.classList.add("dark:border-mocha-yellow", "border-latte-yellow");
         discordStatus.innerHTML = "Idle";
       } else if (data.discord_status === "dnd") {
-        box.classList.remove(color);
+        removeColors();
         box.classList.add("dark:border-mocha-red", "border-latte-red");
         discordStatus.innerHTML = "Do Not Disturb";
       } else if (data.discord_status === "offline") {
-        box.classList.remove(color);
+        removeColors();
         box.classList.add("border-latte-surface0");
         discordStatus.innerHTML = "Offline / Invisible";
         document.getElementById("pfp").src = "https://api.lanyard.rest/272388882539085824.png";
