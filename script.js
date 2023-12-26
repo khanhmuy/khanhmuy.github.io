@@ -93,6 +93,7 @@ async function fetchLanyard() {
     box.classList.remove(...colors);
   }
   for (const color of colors) {
+    box.classList.remove('animate-pulse')
     if (!box.className.match(color)) {
       if (data.discord_status === "online") {
         removeColors();
