@@ -80,14 +80,14 @@ async function fetchLanyard() {
   } catch (error) {}
 
   const colors = [
-    "border-latte-surface0", 
-    "border-mocha-surface0", 
-    "dark:border-mocha-green",
-    "border-latte-green", 
-    "dark:border-mocha-yellow",
-    "border-latte-yellow", 
-    "dark:border-mocha-red",
-    "border-latte-red"
+    "border-surface0-dark", 
+    "dark:border-surface0-light", 
+    "border-green-light", 
+    "dark:border-green-dark",
+    "border-yellow-light", 
+    "dark:border-yellow-dark",
+    "border-red-light",
+    "dark:border-red-dark"
   ];
   function removeColors() {
     box.classList.remove(...colors);
@@ -97,20 +97,20 @@ async function fetchLanyard() {
     if (!box.className.match(color)) {
       if (data.discord_status === "online") {
         removeColors();
-        box.classList.add("dark:border-mocha-green", "border-latte-green");
+        box.classList.add("dark:border-green-dark", "border-green-light");
         discordStatus.innerHTML = "Online";
       } else if (data.discord_status === "idle") {
         removeColors();
-        box.classList.add("dark:border-mocha-yellow", "border-latte-yellow");
+        box.classList.add("dark:border-yellow-dark", "border-yellow-light");
         discordStatus.innerHTML = "Idle";
       } else if (data.discord_status === "dnd") {
         removeColors();
-        box.classList.add("dark:border-mocha-red", "border-latte-red");
+        box.classList.add("dark:border-red-dark", "border-red-light");
         discordStatus.innerHTML = "Do Not Disturb";
       } else if (data.discord_status === "offline") {
         removeColors();
-        box.classList.add("border-latte-surface0");
-        discordStatus.innerHTML = "Offline / Invisible";
+        box.classList.add("border-surface0-dark", "dark:border-surface0-light");
+        discordStatus.innerHTML = "Offline";
         document.getElementById("pfp").src = "https://api.lanyard.rest/272388882539085824.png";
         document.getElementById("customStatus").style.display = "none";
         document.getElementById("spotify").style.display = "none";
