@@ -25,7 +25,6 @@ displayTime();
 //feel free to comment how crappy this code is 💀
 async function fetchLanyard() {
   const data = await fetch("https://api.lanyard.rest/v1/users/272388882539085824").then((res) => res.json()).then(json => json.data);
-  console.log(data.activities);
 
   const box = document.getElementById("discordBox");
   const discordStatus = document.getElementById("discordStatus");
