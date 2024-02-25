@@ -966,6 +966,26 @@ li {
   transform: scale(1.05);
 }
 
+.selection\:bg-surface2-light *::-moz-selection{
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 176 190 / var(--tw-bg-opacity));
+}
+
+.selection\:bg-surface2-light *::selection{
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 176 190 / var(--tw-bg-opacity));
+}
+
+.selection\:bg-surface2-light::-moz-selection{
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 176 190 / var(--tw-bg-opacity));
+}
+
+.selection\:bg-surface2-light::selection{
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 176 190 / var(--tw-bg-opacity));
+}
+
 .hover\:scale-\[1\.03\]:hover{
   --tw-scale-x: 1.03;
   --tw-scale-y: 1.03;
@@ -1054,6 +1074,26 @@ li {
   .dark\:text-text-dark{
     --tw-text-opacity: 1;
     color: rgb(205 214 244 / var(--tw-text-opacity));
+  }
+
+  .dark\:selection\:bg-surface2-dark *::-moz-selection{
+    --tw-bg-opacity: 1;
+    background-color: rgb(88 91 112 / var(--tw-bg-opacity));
+  }
+
+  .dark\:selection\:bg-surface2-dark *::selection{
+    --tw-bg-opacity: 1;
+    background-color: rgb(88 91 112 / var(--tw-bg-opacity));
+  }
+
+  .dark\:selection\:bg-surface2-dark::-moz-selection{
+    --tw-bg-opacity: 1;
+    background-color: rgb(88 91 112 / var(--tw-bg-opacity));
+  }
+
+  .dark\:selection\:bg-surface2-dark::selection{
+    --tw-bg-opacity: 1;
+    background-color: rgb(88 91 112 / var(--tw-bg-opacity));
   }
 
   .dark\:hover\:text-pink-dark:hover{

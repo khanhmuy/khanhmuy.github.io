@@ -36,6 +36,10 @@ module.exports = {
         'pink': {
           light: '#ea76cb',
           dark: '#f5c2e7'
+        },
+        'surface2': {
+          light: '#acb0be',
+          dark: '#585b70'
         }
       }
     }
