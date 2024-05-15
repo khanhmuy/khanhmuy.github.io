@@ -120,6 +120,5 @@ async function fetchLanyard() {
         document.getElementById("vscode").style.display = "none";
       }
     }
-
   }
 }
