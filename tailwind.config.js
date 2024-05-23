@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        // yes fucked up way of declaring this ik but tailwind is weird.
+        // yes fucked up way of declaring this ik but tailwind is weird and i have a massive skill issue
         'surface0': {
           light: '#ccd0fa',
           dark: '#313244'
@@ -32,6 +32,14 @@ module.exports = {
         'green': {
           light: '#40a02b',
           dark: '#a6e3a1'
+        },
+        'blue': {
+          light: '#1e66f5',
+          dark: '#89b4fa'
+        },
+        'mauve': {
+          light: '#8839ef',
+          dark: '#cba6f7'
         },
         'pink': {
           light: '#ea76cb',

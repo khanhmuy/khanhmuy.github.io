@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
 /*
-! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -215,6 +215,8 @@ textarea {
   /* 1 */
   line-height: inherit;
   /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
   color: inherit;
   /* 1 */
   margin: 0;
@@ -238,9 +240,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -496,6 +498,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 ::backdrop{
@@ -546,6 +552,10 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
 }
 
 .relative{
@@ -861,6 +871,10 @@ video {
   font-weight: 600;
 }
 
+.italic{
+  font-style: italic;
+}
+
 .text-text-light{
   --tw-text-opacity: 1;
   color: rgb(76 79 105 / var(--tw-text-opacity));
@@ -997,6 +1011,21 @@ li {
   color: rgb(234 118 203 / var(--tw-text-opacity));
 }
 
+.hover\:text-blue-light:hover{
+  --tw-text-opacity: 1;
+  color: rgb(30 102 245 / var(--tw-text-opacity));
+}
+
+.hover\:text-mauve-light:hover{
+  --tw-text-opacity: 1;
+  color: rgb(136 57 239 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow-light:hover{
+  --tw-text-opacity: 1;
+  color: rgb(223 142 29 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1099,5 +1128,20 @@ li {
   .dark\:hover\:text-pink-dark:hover{
     --tw-text-opacity: 1;
     color: rgb(245 194 231 / var(--tw-text-opacity));
+  }
+
+  .dark\:hover\:text-blue-dark:hover{
+    --tw-text-opacity: 1;
+    color: rgb(137 180 250 / var(--tw-text-opacity));
+  }
+
+  .dark\:hover\:text-mauve-dark:hover{
+    --tw-text-opacity: 1;
+    color: rgb(203 166 247 / var(--tw-text-opacity));
+  }
+
+  .dark\:hover\:text-yellow-dark:hover{
+    --tw-text-opacity: 1;
+    color: rgb(249 226 175 / var(--tw-text-opacity));
   }
 }
