@@ -56,6 +56,8 @@ async function fetchLanyard() {
         document.getElementById("customStatus").style.display = "block";
         if (emoji == undefined) {
           document.getElementById("customStatus").innerHTML = `${state}`;
+        } else if (state == undefined) {
+          document.getElementById("customStatus").innerHTML = `${emoji.name}`;
         } else {
           document.getElementById("customStatus").innerHTML = `${emoji.name} ${state}`;
         }
