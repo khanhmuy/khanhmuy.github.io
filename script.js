@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $("#nav-placeholder").load("nav.html")
+})
 function displayTime() {
   const timeNow = new Date();
 

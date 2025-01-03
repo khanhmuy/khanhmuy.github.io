@@ -20,30 +20,19 @@
         <meta property="og:image" content="../android-icon-192x192.png">
         <meta property="theme-color" content="#FFC0DD">
         <meta property="og:url" content="https://hmuy.tech">
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+        <script>
+            $(document).ready(function() {
+                $("#nav-placeholder").load("../nav.html")
+            })
+        </script>
         
         <!-- CSS -->
         <link href="../dist/output.css" rel="stylesheet">
     </head>
     <body class="bg-base-light dark:bg-base-dark text-text-light dark:text-text-dark selection:bg-surface2-light dark:selection:bg-surface2-dark">
-        <nav class="z-50 w-full flex justify-start items-center mx-auto max-w-4xl px-8 my-20">
-            <a aria-label="home" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="/" title="go to home">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" class="svg-inline--fa fa-home fa-w-18 w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
-                </svg>
-            </a>
-            <a aria-label="blog" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="https://hmuy.tech/blog" title="hmuy posting">
-                <span>blog</span>
-            </a>
-            <a aria-label="projects" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="/projects" title="(crappy) stuff i made">
-                <span>projects</span>
-            </a>
-            <a aria-label="status" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="/devices" title="my devices">
-                <span>devices</span>
-            </a>
-            <a aria-label="status" class="focus:outline-none mr-10 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark" href="https://status.hmuy.tech" title="webstatus">
-                <span>status</span>
-            </a>
-        </nav>
+        <div id="nav-placeholder"></div>
         <div class="h-full lg:px-0 px-10">
             <div class="flex flex-col max-w-3xl mx-auto mb-10 sm:px-0">
                 <h3><span class="text-4xl font-semibold focus:outline-none mr-2 transition duration-300 ease-in-out hover:text-pink-light dark:hover:text-pink-dark">hmuy's devices</span></h3>
