@@ -28,6 +28,7 @@ displayTime();
 //feel free to comment how crappy this code is 💀
 async function fetchLanyard() {
   const data = await fetch("https://api.lanyard.rest/v1/users/272388882539085824").then((res) => res.json()).then(json => json.data);
+  console.log(data);
 
   const box = document.getElementById("discordBox");
   const discordStatus = document.getElementById("discordStatus");
@@ -75,8 +76,8 @@ async function fetchLanyard() {
         document.getElementById(
           "jellyfin"
         ).innerHTML = `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-current h-[1.1em] inline align-middle"><path d="M12 .002C8.826.002-1.398 18.537.16 21.666c1.56 3.129 22.14 3.094 23.682 0C25.384 18.573 15.177 0 12 0zm7.76 18.949c-1.008 2.028-14.493 2.05-15.514 0C3.224 16.9 9.92 4.755 12.003 4.755c2.081 0 8.77 12.166 7.759 14.196zM12 9.198c-1.054 0-4.446 6.15-3.93 7.189.518 1.04 7.348 1.027 7.86 0 .511-1.027-2.874-7.19-3.93-7.19z"/></svg> ${details} | ${state}`;
-        const imgStr = activity.assets.large_image.split('/')[4];
-        document.getElementById('pfp').src = `https://i.imgur.com/${imgStr}.png`;
+        const imgStr = activity.assets.large_image.split('/')[5];
+        document.getElementById('pfp').src = `https://jellyfin.hmuy.live/Items/${imgStr}/Images/Primary`;
       } else if (name === "YouTube Music") {
         document.getElementById("ytmusic").style.display = "block";
         document.getElementById(
