@@ -68,3 +68,7 @@ li {
 .hoverScale:hover {
     transform: scale(1.05);
 }
+
+.loadingCursor {
+    cursor: wait;
+}

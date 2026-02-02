@@ -975,6 +975,10 @@ li {
   transform: scale(1.05);
 }
 
+.loadingCursor {
+  cursor: wait;
+}
+
 .selection\:bg-surface2-light *::-moz-selection{
   --tw-bg-opacity: 1;
   background-color: rgb(172 176 190 / var(--tw-bg-opacity));
@@ -1004,11 +1008,6 @@ li {
 .hover\:text-blue-light:hover{
   --tw-text-opacity: 1;
   color: rgb(30 102 245 / var(--tw-text-opacity));
-}
-
-.hover\:text-mauve-light:hover{
-  --tw-text-opacity: 1;
-  color: rgb(136 57 239 / var(--tw-text-opacity));
 }
 
 .hover\:text-pink-light:hover{
@@ -1123,11 +1122,6 @@ li {
   .dark\:hover\:text-blue-dark:hover{
     --tw-text-opacity: 1;
     color: rgb(137 180 250 / var(--tw-text-opacity));
-  }
-
-  .dark\:hover\:text-mauve-dark:hover{
-    --tw-text-opacity: 1;
-    color: rgb(203 166 247 / var(--tw-text-opacity));
   }
 
   .dark\:hover\:text-pink-dark:hover{
